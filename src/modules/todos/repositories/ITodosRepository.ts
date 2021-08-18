@@ -5,6 +5,7 @@ interface ITodosRepository {
   create(data: ICreateTodoDTO): TodoEntity;
   findByName(name: string): TodoEntity;
   list(): TodoEntity[];
+  findByIDAndUpdate(id: string): TodoEntity;
 }
 export { ITodosRepository };
 // DTOS, criar interfaces para serem reaproveitadas em outros arquivos

@@ -12,6 +12,7 @@ export const database: TypeOrmModuleOptions = {
       __dirname,
       '..',
       '..',
+      '..',
       'modules',
       '**',
       'infra',
@@ -20,7 +21,7 @@ export const database: TypeOrmModuleOptions = {
       '*.ts',
     ),
   ],
-  migrations: [path.resolve(__dirname, 'migrations')],
+  migrations: [path.resolve(__dirname, 'migrations', '*')],
   cli: {
     migrationsDir: path.resolve(__dirname, 'migrations'),
   },
